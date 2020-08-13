@@ -52,5 +52,11 @@ Optimization function:
     • Second, To increase segmented areas we use dilation with a kernel of 5x5 of ones.
 
  
+ 
+## Results:
+  ![res1](/images/res1.png)
+  ![res2](/images/res2.png)
+ 
+ 
 ## Future Work:
     Insead of 2D models try 3D models like 3D residual convolutional neural network.
