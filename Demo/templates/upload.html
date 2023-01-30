@@ -1,0 +1,27 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="main">
+  <div class="title">
+    <h3>Brain Stroke Diagnosis</h3>
+    <!-- -->
+    <p>
+      <small>A web app demo for Brain Stroke Diagnosis using CNN</small>
+    </p> 
+  </div>
+
+	
+	<form method="post" action="/" enctype="multipart/form-data">
+	    <dl>
+			<p>
+				<input type="file" name="file" autocomplete="off" required class="button" onclick="submitImage();">
+			</p>
+	    </dl>
+	    <p>
+			<input type="submit" value="Submit" class="button">
+		</p>
+	</form>
+
+
+{% endblock %}
+
+

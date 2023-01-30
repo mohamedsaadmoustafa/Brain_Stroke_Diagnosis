@@ -1,0 +1,46 @@
+
+{% extends "base.html" %} {% block content %}
+
+<div class="main">
+  <div class="title">
+    <h3>Brain Stroke Diagnosis</h3>
+    <!-- -->
+    <p>
+      <small>A web app demo for Brain Stroke Diagnosis using CNN</small>
+    </p> 
+  </div>
+
+	
+	<form method="post" action="/" enctype="multipart/form-data">
+	    <dl>
+			<p>
+				<input type="file" name="file" autocomplete="off" required class="button" onclick="submitImage();">
+			</p>
+	    </dl>
+	    <p>
+			<input type="submit" value="Submit" class="button">
+		</p>
+	</form>
+		<p>
+		{% with messages = get_flashed_messages() %}
+		  {% if messages %}
+			{% for message in messages %}
+			 	{{ message }}
+			{% endfor %}
+		
+		  {% endif %}
+		{% endwith %}
+	</p>
+
+	 <div id="image-box">
+	    <img id="image-display" />
+	    <div id="pred-result" class="hidden"></div>
+	    <svg id="loader" class="hidden" viewBox="0 0 32 32" width="32" height="32">
+	    	<img src="data:image/png;base64, {{ plot_url }}">
+	    </svg>
+	  </div>
+	</div>
+
+{% endblock %}
+
+
